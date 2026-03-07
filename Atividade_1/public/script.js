@@ -159,7 +159,9 @@ async function carregarAssociacoes() {
       <td>${assoc.carro?.marca ?? ""}</td>
       <td>${assoc.carro?.ano ?? ""}</td>
       <td>
-        <button class="acao excluir" onclick="excluirAssociacao(${assoc.id})">Excluir</button>
+        <button class="acao excluir" onclick="excluirAssociacao(${assoc.pessoaId}, ${assoc.carroId})">
+    Excluir
+  </button>
       </td>
     `;
     tbody.appendChild(tr);
@@ -183,11 +185,15 @@ document
     carregarAssociacoes();
   });
 
-async function excluirAssociacao(id) {
+async function excluirAssociacao(pessoaId, carroId) {
   if (!confirm("Tem certeza que deseja excluir esta associação?")) return;
-  await fetch(`${API_BASE}/associacoes/${id}`, { method: "DELETE" });
+
+  await fetch(`${API_BASE}/associacoes/${pessoaId}/${carroId}`, {
+    method: "DELETE"
+  });
+
   carregarAssociacoes();
-}
+} 
 
 // ---------- Inicialização ----------
 
