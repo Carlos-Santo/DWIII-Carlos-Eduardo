@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centralização */
+.app {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Card branco */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título */
+.card h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Área de busca */
+.search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search input:focus {
+    border-color: #0984e3;
+}
+
+/* Botão */
+.search button {
+    padding: 10px 15px;
+    border: none;
+    background: #0984e3;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search button:hover {
+    background: #0652dd;
+}
+
+/* Resultado */
+.result {
+    margin-top: 10px;
+    color: #333;
+}
+
+.result img {
+    margin: 10px 0;
+}
+
+/* Texto */
+.result h2 {
+    margin-bottom: 10px;
+}
+
+.result p {
+    margin: 5px 0;
+}
+
+/* Mensagem de erro */
+.error {
+    color: red;
+    font-weight: bold;
+}
